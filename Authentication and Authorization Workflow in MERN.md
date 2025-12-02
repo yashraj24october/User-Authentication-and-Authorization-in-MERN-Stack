@@ -98,7 +98,7 @@ When opening a protected page:
 
 **At Backend: 2 layer check**
 
-Check token correctness using jwt.verify(token,JWT_SECRET).
+Check token correctness using **jwt.verify(token,JWT_SECRET).**
 * if failed: Return 401 Unauthorized, Message: "Invalid or expired token."
 * Else: using decoded token, we access the user id and role.
 * we check if user exist.
@@ -109,3 +109,6 @@ Check token correctness using jwt.verify(token,JWT_SECRET).
 
 
 
+<h3>For Login Page/Route</h3>
+
+On login page/register page route, we check if user is authenticated then we will redirect user to homepage with message **"You are already Authenticated"**
